@@ -67,7 +67,7 @@ print (SeqLen[highindex])
 
 #####Calculates the average by taking the sum of list items and dividing by length of list
 
-sum(SeqLen)/float(len(SeqLen))
+print (sum(SeqLen)/float(len(SeqLen)))
 
 
 ######PROBLEM 4
@@ -97,3 +97,14 @@ h.writelines(r)
 
 h.close
         
+##sets numgenes2 equal to zero
+numgenes2 = 0
+
+##checks if first character in line is > symbol, 
+####if so adds 1 to the total gene count
+for l in r:
+    if l[0]==">":
+        numgenes2 = numgenes2 + 1
+        
+##prints the number of genes counted by starting with > symbol
+print (numgenes2)
