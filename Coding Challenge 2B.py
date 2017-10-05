@@ -114,9 +114,11 @@ for m in multigenelist:
             column=l.split("\t")
             if m in column[8]:
                 r.append(l)
+
+## removes any lines that are exons and shorter than 19                
 for q in r:
     columns=q.split ("\t")
-    if columns[2] == "exon" and ((int(columns[4]) - int(columns[3]))) > 19:
+    if columns[2] == "exon" and ((int(columns[4]) - int(columns[3]))) > 20:
         r.remove(q)
 
     
